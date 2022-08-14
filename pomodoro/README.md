@@ -5,14 +5,13 @@ improve your concentration and productivity on a task. It is based on a timed 25
 you focuss on the task-at-hand. After the timed work session ends, you take a short break and repeat the session again.
 The method suggests using a special kitchen tomato timer and check list for every completed 25-minutes of concentration.
 
-The *simple_timer script* will run a simple 25-minutes Pomodoro Timer.
+The *run_timer script* will run a simple 25-minutes Pomodoro Timer.
 
-The *series_timers script* will run a [full-cycle](https://todoist.com/productivity-methods/pomodoro-technique) series 
+The *run_pomodoro script* will run a [full-cycle](https://todoist.com/productivity-methods/pomodoro-technique) series 
 of Pomodoro Timers with **four 25-minute** 'Work' sessions, **three 5-minute** 'Break' sessions, and **one 20-minute** 'Final 
 Break' session.
 
-The *main script* allows the user to choose which type of timer they want and you can **control the reps and timing parameters**,
-like final break time session. Details of those parameters are at the bottom of this document.
+Parameters in both *pomodoro scripts* can be set by the user to **length of the timers or the number of reps**. See the details at the end of this document.
 
 The *test_timer script* sets up a simple 1-minute timer and allows the user to test the start and reset buttons. Pressing
 the start button multiple times will not affect the timer in progress. Pressing the reset button will reset the timer, 

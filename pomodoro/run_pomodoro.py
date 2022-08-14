@@ -1,9 +1,4 @@
-from pomodoro import *
-
-
-def run_timer():
-    pomodoro()
-
+from pomodoro import multi_pomodoro
 
 def run_pomodoro():
     multi_pomodoro()
