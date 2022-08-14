@@ -8,10 +8,16 @@ GREEN = "#9bdeac"
 YELLOW = "#f7f5dd"
 FONT_NAME = "Courier"
 
-timer = None
-minute: int = 0
-count: int = 0
+# timer = None
+# minute: int = 0
+# count: int = 0
 
+class Pomodoro:
+
+    def __init__(self, start_minute: int = 25, timer_type: str = 'timer'):
+        self.timer = None
+        self.minute: int = 0
+        self.count: int = 0
 
 def pomodoro(start_minute: int = 25, timer_type: str = 'timer'):
     global minute
@@ -23,7 +29,7 @@ def pomodoro(start_minute: int = 25, timer_type: str = 'timer'):
     def reset_clicked():
         global minute, count
 
-        if timer is None:
+        if (timer is None) or (minute == start_minute):
             return
 
         if start_minute < 10:
@@ -38,10 +44,10 @@ def pomodoro(start_minute: int = 25, timer_type: str = 'timer'):
             check_label.config(text="")
         else:
             reset_label.config(text="Start Again")
-        minute = 0
+        minute = start_minute
         count = 0
         window.after_cancel(timer)
-        minute = start_minute
+        # minute = start_minute
 
     def start_clicked():
         global minute, count
