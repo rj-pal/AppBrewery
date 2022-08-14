@@ -11,7 +11,7 @@ The *run_pomodoro script* will run a [full-cycle](https://todoist.com/productivi
 of Pomodoro Timers with **four 25-minute** 'Work' sessions, **three 5-minute** 'Break' sessions, and **one 20-minute** 'Final 
 Break' session.
 
-Parameters in both *pomodoro scripts* can be set by the user to **length of the timers or the number of reps**. See the details at the end of this document.
+Parameters in both *pomodoro scripts* can be set by the user to change **length of the timers or the number of reps**. See the details at the end of this document.
 
 The *test_timer script* sets up a simple 1-minute timer and allows the user to test the start and reset buttons. Pressing
 the start button multiple times will not affect the timer in progress. Pressing the reset button will reset the timer, 
