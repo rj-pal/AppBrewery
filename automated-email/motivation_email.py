@@ -38,4 +38,4 @@ def motivation_message(today="Monday"):
 
 
 if __name__ == '__main__':
-    send_email("Saturday")
+    send_email()
