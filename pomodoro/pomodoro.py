@@ -9,12 +9,15 @@ YELLOW = "#f7f5dd"
 FONT_NAME = "Courier"
 
 timer = None
-minute = 0
-count = 0
+minute: int = 0
+count: int = 0
 
 
-def pomodoro(start_minute=25, timer_type='timer'):
+def pomodoro(start_minute: int = 25, timer_type: str = 'timer'):
     global minute
+    if type(start_minute) != int:
+        raise TypeError("The starting minute must be an integer")
+
     minute = start_minute
 
     def reset_clicked():
@@ -117,7 +120,7 @@ def pomodoro(start_minute=25, timer_type='timer'):
     window.mainloop()
 
 
-def multi_pomodoro(number_of_reps=4, work_time=25, break_time=5, final_break_time=20):
+def multi_pomodoro(number_of_reps: int = 4, work_time: int = 25, break_time: int = 5, final_break_time: int = 20):
     if number_of_reps != 0:
         for i in range(number_of_reps):
             global count

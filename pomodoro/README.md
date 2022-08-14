@@ -11,7 +11,7 @@ The *run_pomodoro script* will run a [full-cycle](https://todoist.com/productivi
 of Pomodoro Timers with **four 25-minute** 'Work' sessions, **three 5-minute** 'Break' sessions, and **one 20-minute** 'Final 
 Break' session.
 
-Parameters in both *pomodoro scripts* can be set by the user to change **length of the timers or the number of reps**. See the details at the end of this document.
+Parameters in both *pomodoro scripts* can be set by the developer to change **length of the timers or the number of reps**. See the details at the end of this document.
 
 The *test_timer script* sets up a simple 1-minute timer and allows the user to test the start and reset buttons. Pressing
 the start button multiple times will not affect the timer in progress. Pressing the reset button will reset the timer, 
@@ -23,17 +23,17 @@ In the **pomodoro.py** file:
 start button, the timer will move to the initial start time 25:00 and begin to countdown. If reset is pressed at any time, the clock
 will reset to the full time and not start again until the start button has been pressed again. Once the timer reaches zero, a 
 check mark will appear. Pressing reset here will remove the check mark but keep the time at zero like in the original 
-configuration, and won't countdown again until the start button is pressed.
+configuration, and won't count down again until the start button is pressed.
 
   It has two parameters: *start_time* and *timer_type*. 
-Start time allows the user to adjust the timer length. Timer type allows you to change the name of timer. The function also 
+Start time allows the developer to adjust the timer length. Timer type allows you to change the name of timer. The function also 
 sets the configuration of the timer window and all the button and label features are controlled by this function.
 
 
 - The function **multi_pomodoro()** is a series of work and break timers. Each timer is a new pomodoro() function timer.
 After each timer finishes, the user will have to close the currently open timer with a final check, and a new timer will 
 open. The cycle is four work sessions with three short break sessions one longer, final break session. Each timer will have a 
-unique name of "Work' or "Break' to distinguish the timer type. The number of work sessions and all timer lenghts can be modified. 
+unique name of "Work' or "Break' to distinguish the timer type. The number of work sessions and all timer lengths can be modified. 
 
 
   It has four parameters: *number_of_reps, work_time, break_time, final_break_time*. Number of reps will adjust the number of work 
