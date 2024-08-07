@@ -9,6 +9,9 @@ gmail_server = "smtp.gmail.com"
 from_mail = FROM
 to_mail = TO
 password = PW
+# from_mail = TO
+# to_mail = FROM
+# password = PW2
 
 
 def send_email(today="Monday"):
@@ -25,6 +28,7 @@ def send_email(today="Monday"):
 def motivation_message(today="Monday"):
     date = datetime.datetime.now()
     day = date.weekday()  # integer passed to a day-of-the-week dictionary to check if today parameter is the actual day
+    print(day)
     if DAY_DICT[day] == today:  # dictionary imported from info
         with open("quotes.txt", "r") as file:
             quotes = file.readlines()
@@ -38,4 +42,4 @@ def motivation_message(today="Monday"):
 
 
 if __name__ == '__main__':
-    send_email()
+    send_email(today="Tuesday")
